@@ -18,7 +18,7 @@ def decode_guess(buf, pos):
 
 def encode_bytes(value):
     """Encode varint length followed by the string"""
-    value = bytearray(value, 'utf-8')
+    value = bytearray(value, 'latin1')
     encoded_length = varint.encode_varint(len(value))
     return encoded_length + value
 
